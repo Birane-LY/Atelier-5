@@ -1,0 +1,434 @@
+/* =====================================================
+   BAOBAB GOURMET — CSS GLOBAL (SITE COMPLET)
+   Ambiance : Chaleureuse • Sénégalaise • Moderne
+   ===================================================== */
+
+/* ---------------- RESET ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------------- VARIABLES (PALETTE) ---------------- */
+:root {
+  --bg-main: #FAF3E0;      /* beige chaud */
+  --bg-section: #FFF8EE;   /* crème */
+  --text-main: #3E2C1C;    /* brun */
+  --text-title: #2B1D12;  /* marron profond */
+  --accent: #D97706;      /* ocre */
+  --accent-hover: #B45309;/* terre cuite */
+  --olive: #6B8E23;       /* vert baobab */
+}
+
+/* ---------------- BASE ---------------- */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+section {
+  padding: 90px 20px;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--text-title);
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Style de base pour les paragraphes */
+p {
+  max-width: 700px;
+  margin: 0 auto; 
+  font-size: 18px;
+  text-align: center;
+}
+.about-text p, .chef-text p, .hero-content p {
+    text-align: left;
+    max-width: none;
+    margin-left: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+
+/* ---------------- HERO ---------------- */
+header.hero {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("images/Gemini_Generated_Image_t9iuygt9iuygt9iu.png");
+  background-size: cover; 
+  background-position: center; 
+  position: relative;
+}
+
+.hero-content {
+  height: calc(100vh - 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 80px;
+  color: #B45309;
+}
+
+
+.hero h1 {
+   
+    font-size: 48px;
+    color: #B45309;
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    margin: 0;
+    z-index: 11;
+}
+/* ---------------- HERO TEXTE ---------------- */
+
+.hero-content blockquote {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-style: italic;
+  color: #FAF3E0;
+  margin: 20px 0;
+  padding-left: 20px;
+  border-left: 4px solid var(--accent);
+}
+
+.hero-content p {
+  max-width: 520px;
+  font-size: 18px;
+  color: #FAF3E0;
+  margin-top: 15px;
+  line-height: 1.6;
+}
+
+
+
+/* ---------------- NAVBAR ---------------- */
+.navbar {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #B45309;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--olive);
+}
+
+/* ---------------- BOUTONS ---------------- */
+.btn {
+  display: inline-block;
+  background-color: var(--accent);
+  color: #fff;
+  padding: 14px 36px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none; /* Bonne pratique pour les boutons */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-3px);
+}
+
+/* ---------------- A PROPOS ---------------- */
+.about {
+  background-color: var(--bg-section);
+}
+
+/* CORRECTION: Le HTML utilise maintenant .about-container */
+.about-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    text-align: left; /* Aligne le titre de la section 'À propos' à gauche */
+}
+
+.about-text p {
+  margin-top: 15px;
+}
+
+/* CORRECTION: Hauteur de l'image de la section 'À Propos' réduite */
+.about-image {
+    flex: 1;
+    min-height: 450px; /* Hauteur plus appropriée pour une image côte à côte */
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("images/Gemini_Generated_Image_wwq14uwwq14uwwq1.png");
+    background-size: cover; 
+    background-position: center; 
+    border-radius: 10px;
+}
+
+/* ---------------- MENU (Liste des plats) ---------------- */
+/* Style spécifique pour la liste des 3 plats en haut */
+.menu-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.menu-list .menu-card {
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    flex-basis: 300px; 
+}
+
+.menu-list .menu-card img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.menu-list .menu-card p {
+    text-align: center;
+    max-width: none;
+}
+
+
+/* ---------------- MENU (CARTES) ---------------- */
+.menu-title,
+.menu-subtitle {
+  text-align: center;
+}
+
+.menu-subtitle {
+  margin-bottom: 50px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.menu-card {
+  background-color: #fff;
+  border-radius: 22px;
+  padding: 30px;
+  box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.menu-card:hover {
+  transform: translateY(-10px);
+}
+
+.menu-card h3 {
+  margin-bottom: 10px;
+}
+
+.menu-type {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.menu-card ul {
+  list-style: none;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.menu-card li {
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent-hover);
+}
+
+/* ---------------- CHEF ---------------- */
+.chef {
+    background-color: var(--bg-main);
+}
+
+.chef .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.chef-image {
+    flex: 1;
+}
+
+.chef-text {
+    flex: 1;
+}
+
+.chef-text h2 {
+    text-align: left;
+}
+
+
+/* ---------------- RESERVATION ---------------- */
+.reservation {
+  background-color: var(--bg-main);
+  text-align: center;
+}
+
+.reservation > p {
+    margin-bottom: 30px;
+}
+
+.reservation-form {
+  max-width: 500px;
+  background-color: #fff;
+  padding: 35px;
+  border-radius: 18px;
+  /* CORRECTION: Centrage du formulaire */
+  margin: 30px auto; 
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+input, textarea, select { /* Ajout de select et textarea */
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 0;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  background-color: var(--text-title);
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+footer p {
+    text-align: center;
+    max-width: none;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+/* Nouveau point de rupture pour les tablettes (meilleure mise en page pour les sections côte à côte) */
+@media (max-width: 900px) { 
+    .about-container, .chef .container {
+        flex-direction: column;
+    }
+    
+    .about-text, .chef-text {
+        order: 2; /* Pour que le texte vienne après l'image sur mobile */
+    }
+
+    .about-image {
+        order: 1;
+        width: 100%;
+        min-height: 300px;
+    }
+
+    .about-text h2, .chef-text h2 {
+        text-align: center;
+    }
+
+    .about-text p, .chef-text p {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .menu-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-list .menu-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Le contenu Hero est centré sur mobile */
+  .hero-content {
+    padding: 40px 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-content p, .hero-content blockquote {
+      text-align: center;
+      padding-left: 0;
+  }
+  
+  /* Retrait de la bordure verticale de la citation sur mobile */
+  .hero-content blockquote {
+      border-left: none;
+      border-top: 3px solid var(--accent);
+      padding-top: 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+}
