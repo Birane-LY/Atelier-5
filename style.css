@@ -370,7 +370,6 @@ footer p {
 }
 
 /* ---------------- RESPONSIVE ---------------- */
-/* Nouveau point de rupture pour les tablettes (meilleure mise en page pour les sections côte à côte) */
 @media (max-width: 900px) { 
     .about-container, .chef .container {
         flex-direction: column;
@@ -408,32 +407,5 @@ footer p {
 }
 
 
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 15px;
-  }
 
-  /* Le contenu Hero est centré sur mobile */
-  .hero-content {
-    padding: 40px 20px;
-    text-align: center;
-    align-items: center;
-  }
-
-  .hero-content p, .hero-content blockquote {
-      text-align: center;
-      padding-left: 0;
-  }
-  
-  /* Retrait de la bordure verticale de la citation sur mobile */
-  .hero-content blockquote {
-      border-left: none;
-      border-top: 3px solid var(--accent);
-      padding-top: 15px;
-  }
-
-  .hero-content h1 {
-    font-size: 42px;
-  }
-}
+ 
