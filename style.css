@@ -135,10 +135,15 @@ header.hero {
   color: #B45309;
   font-weight: 500;
   transition: color 0.3s;
+   border: 2px solid #c9a45c;
+  border-radius: 40px;
+  background-color: transparent;
 }
 
 .nav-links a:hover {
   color: var(--olive);
+   background-color: #FFF8EE;
+  color: #FFF8EE;
 }
 
 /* ---------------- BOUTONS ---------------- */
